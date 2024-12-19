@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CCV-Gt-SSo">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stop Watch View Controller-->
+        <scene sceneID="m5d-b0-l6G">
+            <objects>
+                <viewController storyboardIdentifier="StopWatchViewController" id="CCV-Gt-SSo" customClass="StopWatchViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y9b-Kk-Crh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zq-Io-LdT">
+                                <rect key="frame" x="0.0" y="47" width="390" height="310"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="390" id="1de-bU-1S6"/>
+                                    <constraint firstAttribute="height" constant="310" id="opc-x9-zcw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="83"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZU-dL-0bP">
+                                <rect key="frame" x="30" y="397" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="W3z-Rn-d1w"/>
+                                    <constraint firstAttribute="height" constant="90" id="l3U-aA-gzJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Lap"/>
+                                <connections>
+                                    <action selector="leftButtonTapped:" destination="CCV-Gt-SSo" eventType="touchUpInside" id="f5h-31-z4i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75U-eW-Zzv">
+                                <rect key="frame" x="270" y="397" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="eRK-LD-FEL"/>
+                                    <constraint firstAttribute="height" constant="90" id="qVQ-oL-1dW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start"/>
+                                <connections>
+                                    <action selector="rightButtonTapped:" destination="CCV-Gt-SSo" eventType="touchUpInside" id="cxR-6a-AN9"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E5L-IM-jF0">
+                                <rect key="frame" x="0.0" y="510" width="390" height="334"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7fe-IJ-0V2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7fe-IJ-0V2" firstAttribute="trailing" secondItem="E5L-IM-jF0" secondAttribute="trailing" id="5oj-wU-J30"/>
+                            <constraint firstItem="7fe-IJ-0V2" firstAttribute="trailing" secondItem="75U-eW-Zzv" secondAttribute="trailing" constant="30" id="Ghn-gl-0iO"/>
+                            <constraint firstItem="MZU-dL-0bP" firstAttribute="leading" secondItem="7fe-IJ-0V2" secondAttribute="leading" constant="30" id="HVH-aE-gHO"/>
+                            <constraint firstItem="1zq-Io-LdT" firstAttribute="leading" secondItem="7fe-IJ-0V2" secondAttribute="leading" id="Ito-PX-Zgi"/>
+                            <constraint firstItem="MZU-dL-0bP" firstAttribute="top" secondItem="1zq-Io-LdT" secondAttribute="bottom" constant="40" id="Q12-4f-kK7"/>
+                            <constraint firstItem="75U-eW-Zzv" firstAttribute="top" secondItem="1zq-Io-LdT" secondAttribute="bottom" constant="40" id="Tyk-GK-iHg"/>
+                            <constraint firstAttribute="bottom" secondItem="E5L-IM-jF0" secondAttribute="bottom" id="dUj-qa-se8"/>
+                            <constraint firstItem="1zq-Io-LdT" firstAttribute="top" secondItem="7fe-IJ-0V2" secondAttribute="top" id="jOc-lU-KaY"/>
+                            <constraint firstItem="E5L-IM-jF0" firstAttribute="leading" secondItem="7fe-IJ-0V2" secondAttribute="leading" id="owV-Uf-lPX"/>
+                            <constraint firstItem="7fe-IJ-0V2" firstAttribute="trailing" secondItem="1zq-Io-LdT" secondAttribute="trailing" id="sO9-q1-wwQ"/>
+                            <constraint firstItem="E5L-IM-jF0" firstAttribute="top" secondItem="Y9b-Kk-Crh" secondAttribute="top" constant="510" id="yWV-iq-0ru"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftButton" destination="MZU-dL-0bP" id="Lpi-3u-cOD"/>
+                        <outlet property="rightButton" destination="75U-eW-Zzv" id="yeZ-jw-tE1"/>
+                        <outlet property="tableView" destination="E5L-IM-jF0" id="SX4-3d-KBI"/>
+                        <outlet property="timeLabel" destination="1zq-Io-LdT" id="Eyv-dg-UTv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5e-NY-2Tt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4592.3076923076924" y="128.67298578199052"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

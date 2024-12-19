@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k4c-xo-XFc">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer View Controller-->
+        <scene sceneID="Iyj-lm-HKP">
+            <objects>
+                <viewController storyboardIdentifier="TimerViewController" id="k4c-xo-XFc" customClass="TimerViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4E8-nq-os6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p01-ez-UHw">
+                                <rect key="frame" x="30" y="397" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="2t0-rl-ntD"/>
+                                    <constraint firstAttribute="height" constant="90" id="3Ox-m3-djX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
+                                <connections>
+                                    <action selector="leftButtonTapped:" destination="k4c-xo-XFc" eventType="touchUpInside" id="eML-ZX-q7i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZT-5r-ruS">
+                                <rect key="frame" x="270" y="397" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="OA8-1F-ygY"/>
+                                    <constraint firstAttribute="width" constant="90" id="i9o-ya-IQX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start"/>
+                                <connections>
+                                    <action selector="rightButtonTapped:" destination="k4c-xo-XFc" eventType="touchUpInside" id="evZ-i5-UeO"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S48-ot-YqA">
+                                <rect key="frame" x="0.0" y="497" width="390" height="313"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2s-hd-hPT">
+                                <rect key="frame" x="35" y="47" width="320" height="310"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="tPn-3E-C2s"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5ko-Lw-f6g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p01-ez-UHw" firstAttribute="top" secondItem="z2s-hd-hPT" secondAttribute="bottom" constant="40" id="Mor-io-RAM"/>
+                            <constraint firstItem="z2s-hd-hPT" firstAttribute="leading" secondItem="5ko-Lw-f6g" secondAttribute="leading" constant="35" id="O9W-Q6-3iQ"/>
+                            <constraint firstItem="5ko-Lw-f6g" firstAttribute="bottom" secondItem="S48-ot-YqA" secondAttribute="bottom" id="cyu-dl-QKL"/>
+                            <constraint firstItem="5ko-Lw-f6g" firstAttribute="trailing" secondItem="RZT-5r-ruS" secondAttribute="trailing" constant="30" id="gm8-6I-cOv"/>
+                            <constraint firstItem="z2s-hd-hPT" firstAttribute="top" secondItem="5ko-Lw-f6g" secondAttribute="top" id="pzz-vr-bVw"/>
+                            <constraint firstItem="S48-ot-YqA" firstAttribute="leading" secondItem="5ko-Lw-f6g" secondAttribute="leading" id="qoY-53-kaH"/>
+                            <constraint firstItem="5ko-Lw-f6g" firstAttribute="trailing" secondItem="S48-ot-YqA" secondAttribute="trailing" id="vtc-di-YXg"/>
+                            <constraint firstItem="RZT-5r-ruS" firstAttribute="top" secondItem="z2s-hd-hPT" secondAttribute="bottom" constant="40" id="w65-BC-2kD"/>
+                            <constraint firstItem="p01-ez-UHw" firstAttribute="leading" secondItem="5ko-Lw-f6g" secondAttribute="leading" constant="30" id="x7E-CJ-dpp"/>
+                            <constraint firstItem="S48-ot-YqA" firstAttribute="top" secondItem="5ko-Lw-f6g" secondAttribute="top" constant="450" id="zaC-f9-lWX"/>
+                            <constraint firstItem="z2s-hd-hPT" firstAttribute="centerX" secondItem="5ko-Lw-f6g" secondAttribute="centerX" id="ztR-bP-ETg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Huc-bT-MJ0"/>
+                    <connections>
+                        <outlet property="leftButton" destination="p01-ez-UHw" id="ocv-SL-c7J"/>
+                        <outlet property="pickerView" destination="z2s-hd-hPT" id="cZu-Ph-WXp"/>
+                        <outlet property="rightButton" destination="RZT-5r-ruS" id="Ghz-pF-a4N"/>
+                        <outlet property="tableView" destination="S48-ot-YqA" id="dqW-qg-67L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoa-sm-FpY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2903.0769230769229" y="726.5402843601895"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
