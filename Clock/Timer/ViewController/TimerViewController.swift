@@ -130,7 +130,8 @@ class TimerViewController: UIViewController {
         }
         
         let pickerWidth: CGFloat = pickerView.frame.width
-        let labelY: CGFloat = (pickerView.frame.height / 2) + 35
+        let labelY: CGFloat = (pickerView.frame.height / 2) - 12
+        
         
         for (index, label) in labelList.enumerated() {
             let labelX: CGFloat = (pickerWidth / CGFloat(columCount)) * CGFloat(index + 1) - fontSize * 1.7
